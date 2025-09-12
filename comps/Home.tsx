@@ -14,8 +14,8 @@ const Home = ({ products, bannerData }: HomeProps) => {
   const [sortOrder, setSortOrder] = useState<"" | "low" | "high">("");
   const [productsData, setProductsData] = useState<ProductsTypes[]>(products);
 
-  
-const handleSort = (order: "low" | "high" | "") => {
+  const handleSort = (order: "low" | "high" | "") => {
+    console.log("cicked");
     setSortOrder(order);
 
     if (!order) {
@@ -29,7 +29,6 @@ const handleSort = (order: "low" | "high" | "") => {
 
     setProductsData(sorted);
   };
-
 
   return (
     <main>
@@ -59,7 +58,7 @@ const handleSort = (order: "low" | "high" | "") => {
 
       {/* === SHOW PRODUCTS  */}
       <section
-        className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4
+        className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3
        lg:mx-20 overflow-hidden
       "
       >
